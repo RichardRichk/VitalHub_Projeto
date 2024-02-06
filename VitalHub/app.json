@@ -7,9 +7,9 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./src/assets/Images/VitalHub_Logo_2.png",
+      "resizeMode": "center",
+      "backgroundColor": "#49B3BA"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -26,8 +26,8 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": [
+    "plugins": [[
       "expo-font"
-    ]
+    ]]
   }
 }
