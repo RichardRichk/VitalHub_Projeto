@@ -1,11 +1,12 @@
-import { Button, View } from "react-native"
 import { Container } from "../../components/Container/Style"
-import { Logo } from "../../components/Logo/Style"
+import { GoogleIcon, Logo } from "../../components/Logo/Style"
 import { Title } from "../../components/Title/Style"
 import { Input } from "../../components/Input/Style"
 import { LinkMedium } from "../../components/Links/Style"
+import { Button, GoogleButton, TextButton, TextGoogleButton } from "../../components/Button/Style"
+import { ContentAccount, ContentForgot, ContentText } from "../../components/ContentAccount/Style"
 
-export const LoginFunc = () => {
+export const LoginFunc = ({navigation}) => {
     return(
         <Container>
 
@@ -13,11 +14,10 @@ export const LoginFunc = () => {
                 source={require('../../assets/Images/VitalHub_Logo4.png')}
             />
 
-            <Title>Entrar ou criar conta</Title>
+            <Title>ENTRAR OU CRIAR CONTA</Title>
  
             <Input
                 placeholder="Usuario ou Email"
-                place
             />
             <Input
                 placeholder="Senha"
@@ -26,20 +26,30 @@ export const LoginFunc = () => {
 
             
 
-            <LinkMedium>Esqueceu sua senha?</LinkMedium>
+            <LinkMedium 
+            onPress={() => navigation.navigate('Forgot_Password')}
+            >
+                Esqueceu sua senha?
+            </LinkMedium>
 
-            {/*
+            
             <Button>
-                <ButtonTitle></ButtonTitle>
+                <TextButton>ENTRAR</TextButton>
             </Button>
+                
+            
 
-            <ButtonGoogle>
-                <ButtonTitleGoogle></ButtonTitleGoogle>
-            </ButtonGoogle>
-
+            <GoogleButton>
+                <GoogleIcon 
+                    source={require('../../assets/Images/GoogleIcon.png')}
+                />
+                <TextGoogleButton>ENTRAR COM GOOGLE</TextGoogleButton>
+            </GoogleButton>
+            
             <ContentAccount>
-                <TextAccount></TextAccount>
-            </ContentAccount> */}
+                <ContentText>não tem conta? </ContentText> 
+                <ContentForgot>crie uma conta agora</ContentForgot>
+            </ContentAccount>
 
         </Container>
     )
