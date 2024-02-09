@@ -1,10 +1,10 @@
-import { Button, ButtonReturnIcon, ForgotButton, TextButton } from "../../components/Button/Style"
+import { Button, ButtonReturnIcon, ButtonWithMargin, ForgotButton, TextButton } from "../../components/Button/Style"
 import { Container } from "../../components/Container/Style"
 import { Input } from "../../components/Input/Style"
 import { Logo, ReturnIcon } from "../../components/Logo/Style"
 import { SubTitle, Title } from "../../components/Title/Style"
 
-export const ForgotPasswordFunc = ({navigation}) => {
+export const ForgotPassword = ({navigation}) => {
     return(
         <Container>
 
@@ -32,9 +32,11 @@ export const ForgotPasswordFunc = ({navigation}) => {
                 placeholder = "Usuário ou E-mail"
             />
 
-            <ForgotButton>
+            <ButtonWithMargin
+            onPress={() => navigation.navigate('Email_Verify')}
+            >
                 <TextButton>Continuar</TextButton>
-            </ForgotButton>
+            </ButtonWithMargin>
         </Container>
     )
 }

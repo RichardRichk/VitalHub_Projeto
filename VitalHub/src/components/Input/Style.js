@@ -21,5 +21,17 @@ export const InputVerify = styled.TextInput.attrs({placeholderTextColor: '#34898
     border: 2px solid #77CACF;
     border-radius: 5px;
     font-size: 40px;
-    font-family: "Quicksand_600SemiBold",
+    font-family: 'Quicksand_600SemiBold';
+    text-align: center;
+    margin-right: 5.55%;    
+    margin-bottom: 30px;
+`
+
+export const InputLabel = styled.Text`
+    font-size: 16px;
+    font-family: 'Quicksand_600SemiBold';
+    color: #000000;
+    margin-bottom: 10px;
+    align-items: start;
+    justify-content: start;
 `

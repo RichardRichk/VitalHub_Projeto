@@ -1,8 +1,8 @@
-import { ButtonReturnIcon } from "../../components/Button/Style"
+import { Button, ButtonReturnIcon, TextButton } from "../../components/Button/Style"
 import { Container } from "../../components/Container/Style"
-import { ContentVerify } from "../../components/ContentAccount/Style"
+import { ContentAccount, ContentResend, ContentVerify } from "../../components/ContentAccount/Style"
 import { InputVerify } from "../../components/Input/Style"
-import { Logo } from "../../components/Logo/Style"
+import { Logo, ReturnIcon } from "../../components/Logo/Style"
 import { SubTitle, Title } from "../../components/Title/Style"
 
 export const EmailVerify = ({navigation}) => {
@@ -10,8 +10,12 @@ export const EmailVerify = ({navigation}) => {
         <Container>
             
             {/* Criar componente para agilizar */}
-            <ButtonReturnIcon>
-
+            <ButtonReturnIcon
+                onPress={() => navigation.navigate('Forgot_Password')}
+            >
+                <ReturnIcon
+                    source={require('../../assets/Images/Icon_Back.png')}
+                />
             </ButtonReturnIcon>
 
             <Logo
@@ -36,6 +40,16 @@ export const EmailVerify = ({navigation}) => {
                     placeholder= "0"
                 />
             </ContentVerify>
+
+            <Button
+                onPress={() => navigation.navigate('Change_Password')}
+            >
+                <TextButton>ENTRAR</TextButton>
+            </Button>
+
+            <ContentAccount>
+                <ContentResend>Reenviar Código</ContentResend>
+            </ContentAccount>
 
             
 

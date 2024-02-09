@@ -5,3 +5,8 @@ export const Container = styled.SafeAreaView`
     align-items: center;
     background-color: #fafafa;
 `
+
+export const DoubleView = styled.View`
+    width: 90%;
+    
+`

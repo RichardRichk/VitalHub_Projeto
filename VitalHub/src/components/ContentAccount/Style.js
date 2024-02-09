@@ -24,3 +24,7 @@ export const ContentForgot = styled.Text`
     color: #4d659d;
     text-decoration: underline;
 `
+
+export const ContentResend = styled(ContentForgot)`
+    color: #344F8F;
+`

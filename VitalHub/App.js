@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationFunc } from './src/screens/Navigation/Navigation';
 import { LoginFunc } from './src/screens/Login/Login';
-import { ForgotPasswordFunc } from './src/screens/ForgotPassword/ForgotPassword';
+import { ForgotPassword } from './src/screens/ForgotPassword/ForgotPassword';
 import { StatusBar } from 'react-native';
 
 //import das fonts
@@ -10,6 +10,9 @@ import { useFonts } from 'expo-font';
 import {MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold } from '@expo-google-fonts/montserrat-alternates'
 import {Quicksand_500Medium, Quicksand_600SemiBold} from '@expo-google-fonts/quicksand'
 import { EmailVerify } from './src/screens/EmailVerify/EmailVerify';
+import { ChangePassword } from './src/screens/ChangePassword/ChangePassword';
+import { CreateAccountFunc } from './src/screens/CreateAccount/CreateAccount';
+import { ProfileFunc } from './src/screens/Profile/Profile';
 
 //instancia do StackNavigator
 const Stack = createNativeStackNavigator();
@@ -43,14 +46,14 @@ export default function App() {
         screenOptions={{headerShown: false}}
       >
 
-        {/* <Stack.Screen
+        <Stack.Screen
           //nome da tela
           name ='Navigation'
           //componente que sera chamado
           component={NavigationFunc}
           //titulo da tela
           options={{title: 'Navigation'}}
-        /> */}
+        />
 
         <Stack.Screen
           name='Login'
@@ -60,7 +63,7 @@ export default function App() {
 
         <Stack.Screen
           name='Forgot_Password'
-          component={ForgotPasswordFunc}
+          component={ForgotPassword}
           options={{title: 'Forgot_Password'}}
         />
 
@@ -68,6 +71,24 @@ export default function App() {
           name='Email_Verify'
           component={EmailVerify}
           options={{title: 'Email_Verify'}}
+        />
+
+        <Stack.Screen
+          name='Change_Password'
+          component={ChangePassword}
+          options={{title: 'Change_Password'}}
+        />
+
+        <Stack.Screen
+          name='Create_Account'
+          component={CreateAccountFunc}
+          options={{title: 'Create_Account'}}
+        />
+
+        <Stack.Screen
+          name='Profile'
+          component={ProfileFunc}
+          options={{title: 'Profile'}}
         />
 
       </Stack.Navigator>

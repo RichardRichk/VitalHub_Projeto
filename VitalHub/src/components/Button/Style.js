@@ -10,7 +10,7 @@ export const Button = styled.TouchableOpacity`
     align-items: center;
 `
 
-export const ForgotButton = styled(Button)`
+export const ButtonWithMargin = styled(Button)`
     margin-top: 30px;
 `
 
@@ -22,19 +22,22 @@ export const GoogleButton = styled(Button)`
     
 `
 
-export const ButtonReturnIcon = styled.TouchableOpacity`
-    position: absolute;
-    align-self: flex-start;
-    margin-top: 5%;
-    margin-left: 5%;
-`
 
 export const TextButton = styled.Text`
     font-size: 14px;
     font-family: 'MontserratAlternates_700Bold';
     color: #FFFFFF;
-`
+    `
 
 export const TextGoogleButton = styled(TextButton)`
     color: #496BBA;
-`
+    `
+    
+
+export const ButtonReturnIcon = styled.TouchableOpacity`
+        position: absolute;
+        align-self: flex-start;
+        margin-top: 5%;
+        margin-left: 5%;
+    `
+

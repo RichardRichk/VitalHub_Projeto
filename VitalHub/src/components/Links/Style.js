@@ -6,7 +6,7 @@ export const LinkMedium = styled.Text`
     color: #8c8a97;
     align-self: flex-start;
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 5.55%;
     margin-bottom: 30px;
     text-decoration: underline;
 `

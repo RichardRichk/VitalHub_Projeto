@@ -11,7 +11,7 @@ export const Logo = styled.Image`
 `
 
 export const GoogleIcon = styled.Image`
-    margin-right: 27px;
+    margin-right: 7.5%;
     color: #496BBA;
 `
 

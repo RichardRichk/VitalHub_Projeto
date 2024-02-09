@@ -33,7 +33,8 @@ export const LoginFunc = ({navigation}) => {
             </LinkMedium>
 
             
-            <Button>
+            <Button
+            >
                 <TextButton>ENTRAR</TextButton>
             </Button>
                 
@@ -48,7 +49,9 @@ export const LoginFunc = ({navigation}) => {
             
             <ContentAccount>
                 <ContentText>não tem conta? </ContentText> 
-                <ContentForgot>crie uma conta agora</ContentForgot>
+                <ContentForgot
+                    onPress = {() => navigation.navigate('Create_Account')}
+                >crie uma conta agora</ContentForgot>
             </ContentAccount>
 
         </Container>
