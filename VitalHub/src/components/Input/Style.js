@@ -10,8 +10,13 @@ export const Input = styled.TextInput.attrs({placeholderTextColor: '#34898f'})`
     border-radius: 5px;
     color: #34898f;
     font-size: 14px;
-    font-family: 'MontserratAlternates_600SemiBold';
-    
+    font-family: 'MontserratAlternates_600SemiBold';    
+`
+
+export const InputProfile = styled(Input).attrs({placeholderTextColor: ['#33303E']})`
+    border: 0px;
+    background-color: #F5F3F3;
+    font-family: 'MontserratAlternates_500Medium';
 `
 
 export const InputVerify = styled.TextInput.attrs({placeholderTextColor: '#34898f'})`
@@ -30,8 +35,14 @@ export const InputVerify = styled.TextInput.attrs({placeholderTextColor: '#34898
 export const InputLabel = styled.Text`
     font-size: 16px;
     font-family: 'Quicksand_600SemiBold';
+    margin-bottom: -5px;
+    margin-top: 20px;
     color: #000000;
-    margin-bottom: 10px;
     align-items: start;
     justify-content: start;
+`
+
+export const InputDouble = styled(InputProfile)`
+    width: 100%;
+    margin-bottom: 30px;
 `

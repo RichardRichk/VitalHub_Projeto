@@ -1,31 +1,67 @@
-import { Container } from "../../components/Container/Style"
-import { Input, InputLabel } from "../../components/Input/Style"
-import { ProfilePic } from "../../components/ProfilePics/Style"
+import { StatusBar } from "expo-status-bar"
+import { BoxInput, Container, ContainerScroll, DoubleView } from "../../components/Container/Style"
+import { HeaderPhotoContainer, HeaderPhoto } from "../../components/HeaderPhoto/Style"
+import { InputDouble, InputLabel, InputProfile } from "../../components/Input/Style"
+import { ModalProfile } from "../../components/Modal/Style"
+import { SubTitle, Title } from "../../components/Title/Style"
+import { Button, TextButton } from "../../components/Button/Style"
 
 export const ProfileFunc = ({navigation}) => {
+    return(
     <Container>
 
-            {/* 
-                <Image>
+            <HeaderPhotoContainer>
+                <HeaderPhoto
+                    source={require("../../assets/Images/ProfilePic.png")}
+                />
+            </HeaderPhotoContainer>
 
-                <Modal>
-            
-            */}
+            <ModalProfile>
+                <Title>Richard Kosta</Title>
+                <SubTitle>richard.kosta@gmail.com</SubTitle>
+            </ModalProfile>
+
+            <ContainerScroll>
 
             <InputLabel>Data de nascimento:</InputLabel>
-            <Input
+            <InputProfile
                 placeholder= "04/05/1990"
             />
 
             <InputLabel>CPF:</InputLabel>
-            <Input
+            <InputProfile
                 placeholder= "859********"
             />
 
             <InputLabel>Endereço</InputLabel>
-            <Input
+            <InputProfile
                 placeholder= "Rua Vicenso Silva, 987"
             />
 
+            <DoubleView>
+                <BoxInput>
+                    <InputLabel>Cep</InputLabel>
+                    <InputDouble
+                        placeholder="00000-000"
+                    />
+                </BoxInput>
+
+                <BoxInput>
+                    <InputLabel>Cidade</InputLabel>
+                    <InputDouble
+                        placeholder="Diadema-SP"
+                    />
+                </BoxInput>
+            </DoubleView>
+
+            <Button>
+
+                <TextButton>SALVAR</TextButton>
+
+            </Button>
+
+            </ContainerScroll>
+    
     </Container> 
+    )
 }

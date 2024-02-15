@@ -13,6 +13,7 @@ import { EmailVerify } from './src/screens/EmailVerify/EmailVerify';
 import { ChangePassword } from './src/screens/ChangePassword/ChangePassword';
 import { CreateAccountFunc } from './src/screens/CreateAccount/CreateAccount';
 import { ProfileFunc } from './src/screens/Profile/Profile';
+import { HomeFunc } from './src/screens/Home/Home';
 
 //instancia do StackNavigator
 const Stack = createNativeStackNavigator();
@@ -89,6 +90,12 @@ export default function App() {
           name='Profile'
           component={ProfileFunc}
           options={{title: 'Profile'}}
+        />
+
+        <Stack.Screen
+          name='Home'
+          component={HomeFunc}
+          options={{title: 'Home'}}
         />
 
       </Stack.Navigator>
