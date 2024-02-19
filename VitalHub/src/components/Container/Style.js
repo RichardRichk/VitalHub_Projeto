@@ -17,6 +17,9 @@ export const ContainerScroll = styled.ScrollView`
 `
 
 export const ContainerHeader = styled(LinearGradient).attrs({ colors: ['#60BFC5', '#496BBA'], start: {x: -0.05, y: 1.08}, end: {x: 1, y: 0} })`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 144px;
     border-radius: 0px 0px 15px 15px;

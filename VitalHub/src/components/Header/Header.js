@@ -1,5 +1,6 @@
 import { ContainerHeader } from "../Container/Style"
 import { BoxUser, DataUser, ImageUser, NameUser, TextDefault } from "./Style"
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export const Header = () => {
     return (
@@ -9,6 +10,7 @@ export const Header = () => {
             <BoxUser>
 
                 <ImageUser
+                    source={require("../../assets/Images/DoctorPhoto.png")}
                 />
 
                 <DataUser>
@@ -20,7 +22,12 @@ export const Header = () => {
 
             </BoxUser>
 
-            {/* material icons */}
+            <MaterialIcons
+                name="notifications"
+                size={30}
+                color="#FBFBFB" 
+                style={{ marginTop: 20, marginRight: 20 }}
+            />
 
         </ContainerHeader>
     )
