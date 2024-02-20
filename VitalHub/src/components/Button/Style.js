@@ -10,6 +10,10 @@ export const Button = styled.TouchableOpacity`
     align-items: center;
 `
 
+export const ButtonCard = styled.TouchableOpacity`
+
+`
+
 export const ButtonWithMargin = styled(Button)`
     margin-top: 30px;
 `
@@ -20,6 +24,11 @@ export const GoogleButton = styled(Button)`
     flex-direction: row;
     justify-content: center;
     
+`
+
+
+export const ButtonTextCard = styled.Text`
+    color: ${(props) => props.situacao == "pendente" ? "#c81d25" : "#344f8f"}
 `
 
 

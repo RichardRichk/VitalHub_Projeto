@@ -40,3 +40,25 @@ export const BoxInput = styled.SafeAreaView`
     display: flex;
     flex-direction: column;
 `
+
+export const ContainerCard = styled.View`
+
+width: 90%;
+height: 100px;
+margin-bottom: 12px;
+
+/* display: flex; */
+flex-direction: row;
+/* justify-content:space-between;
+align-items:center; */
+
+
+/* Colocar BoxShadow */
+
+padding: 10px 10px;
+gap:10px;
+
+border-radius: 5px;
+background-color: #FFFFFF;
+
+`

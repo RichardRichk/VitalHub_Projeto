@@ -4,6 +4,8 @@ import Calendar from "../../components/Calendar/Calendar"
 import { Container } from "../../components/Container/Style"
 import { Header } from "../../components/Header/Header"
 import { FilterAppointment } from "./Style"
+import { ListComponent } from "../../components/List/List"
+import { CardAppointment } from "../../components/CardAppointment/CardAppointment"
 
 const Consultas = [
     {id: 1, nome: "Richk", situacao: "pendente"},
@@ -23,10 +25,6 @@ export const HomeFunc = (navigation) =>{
             <Header/>
 
             <Calendar/>
-
-            {/* Filtros(button) */}
-            {/* Container */}
-            {/* Botoes */}
 
             <FilterAppointment>
 
@@ -49,7 +47,22 @@ export const HomeFunc = (navigation) =>{
             </FilterAppointment>
                 
 
-            {/* Cards */}
+            {/* Lista(Flatlist) */}
+            <ListComponent
+                data={Consultas}
+                keyExtractor={(item) => item.id}
+
+                renderItem={({item}) =>
+                    statusLista == item.situacao && (
+
+                        <CardAppointment
+                            situacao={item.situacao}
+                        />
+                        
+                        )     
+                    }
+            />
+            
         </Container>
     )
 }

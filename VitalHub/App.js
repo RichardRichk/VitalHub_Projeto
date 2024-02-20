@@ -8,7 +8,7 @@ import { StatusBar } from 'react-native';
 //import das fonts
 import { useFonts } from 'expo-font';
 import {MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold } from '@expo-google-fonts/montserrat-alternates'
-import {Quicksand_500Medium, Quicksand_600SemiBold} from '@expo-google-fonts/quicksand'
+import {Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_400Regular} from '@expo-google-fonts/quicksand'
 import { EmailVerify } from './src/screens/EmailVerify/EmailVerify';
 import { ChangePassword } from './src/screens/ChangePassword/ChangePassword';
 import { CreateAccountFunc } from './src/screens/CreateAccount/CreateAccount';
@@ -25,7 +25,8 @@ export default function App() {
     MontserratAlternates_500Medium,
     MontserratAlternates_700Bold,
     Quicksand_600SemiBold,
-    Quicksand_500Medium
+    Quicksand_500Medium,
+    Quicksand_400Regular
   })
 
   if(!fontsLoaded && !fontsError){

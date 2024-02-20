@@ -15,3 +15,15 @@ export const SubTitle = styled.Text`
     margin-top: 10px;
     text-align: center;
 `
+
+export const TitleTimeCardGreen = styled.Text`
+color: green;
+font-size: 16px;
+font-family: "Quicksand_600SemiBold";
+`
+
+export const TitleTimeCardGray = styled.Text`
+color: gray;
+font-size: 16px;
+font-family: "Quicksand_600SemiBold";
+`
