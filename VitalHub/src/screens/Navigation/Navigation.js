@@ -31,6 +31,10 @@ export const NavigationFunc = ({navigation}) => {
                 title="Home"
                 onPress={() => navigation.navigate("Home")}
             />
+            <Button 
+                title="Form Require"
+                onPress={() => navigation.navigate("FormRequire")}
+            />
 
         </View>
     )

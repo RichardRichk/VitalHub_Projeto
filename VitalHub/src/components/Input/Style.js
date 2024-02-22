@@ -19,6 +19,13 @@ export const InputProfile = styled(Input).attrs({placeholderTextColor: ['#33303E
     font-family: 'MontserratAlternates_500Medium';
 `
 
+export const InputFormRequire = styled(Input)`
+    height: 121px;
+    border: 2px solid #34898F;
+    background-color: #FFFFFF;
+    font-family: "MontserratAlternates_600SemiBold";
+`
+
 export const InputVerify = styled.TextInput.attrs({placeholderTextColor: '#34898f'})`
     height: 62px;
     width: 16%;

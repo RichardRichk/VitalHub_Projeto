@@ -6,6 +6,8 @@ import { Header } from "../../components/Header/Header"
 import { FilterAppointment } from "./Style"
 import { ListComponent } from "../../components/List/List"
 import { CardAppointment } from "../../components/CardAppointment/CardAppointment"
+import CancellationModal from "../../components/CancellationModal/CancellationModal"
+import AppointmentModal from "../../components/AppointmentModal/AppointmentModal"
 
 const Consultas = [
     {id: 1, nome: "Richk", situacao: "pendente"},
@@ -15,9 +17,13 @@ const Consultas = [
     {id: 5, nome: "Richk", situacao: "realizado"}
 ]
 
-export const HomeFunc = (navigation) =>{
+export const HomeFunc = ({navigation}) =>{
     
-    const[statusLista, setStatusLista] = useState("Pendente")
+    const[statusLista, setStatusLista] = useState("Pendente");
+    // Satate para os modais
+    const [showModalCancel, setShowModalCancel] = useState(false);
+    const [showModalAppointment, setShowModalAppointment] = useState(false);
+
 
     return (
         <Container>
@@ -57,11 +63,26 @@ export const HomeFunc = (navigation) =>{
 
                         <CardAppointment
                             situacao={item.situacao}
+                            onPressCancel={() => setShowModalCancel(true)}
+                            onPressAppointment={() => setShowModalAppointment(true)}
                         />
                         
                         )     
                     }
             />
+
+
+            <CancellationModal 
+                visible={showModalCancel}
+                setShowModalCancel={setShowModalCancel}
+            />
+
+            <AppointmentModal
+                visible={showModalAppointment}
+                setShowModalAppointment={setShowModalAppointment}
+                navigation={navigation}
+            />
+
             
         </Container>
     )

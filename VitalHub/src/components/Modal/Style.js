@@ -14,3 +14,7 @@ background-color: white;
 box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
 
 `
+
+export const ModalFormRequire = styled(ModalProfile)`
+    border: 1.5px solid #34898F;
+`

@@ -23,19 +23,30 @@ export const GoogleButton = styled(Button)`
     background-color: #FAFAFA;
     flex-direction: row;
     justify-content: center;
-    
+`
+
+export const ButtonSecondary = styled(Button)`
+    background-color: transparent;
+    border: none;
+    margin-top: 30px;
 `
 
 
 export const ButtonTextCard = styled.Text`
-    color: ${(props) => props.situacao == "pendente" ? "#c81d25" : "#344f8f"}
-`
+    color: ${(props) => props.situacao == "pendente" ? "#c81d25" : "#344f8f"};
+    `
 
 
 export const TextButton = styled.Text`
+    text-align: center;
     font-size: 14px;
     font-family: 'MontserratAlternates_700Bold';
     color: #FFFFFF;
+    `
+    export const ButtonSecondaryTitle = styled(TextButton)`
+        text-transform: capitalize;
+        text-decoration: underline;
+        color: #344f8f;
     `
 
 export const TextGoogleButton = styled(TextButton)`
@@ -49,4 +60,9 @@ export const ButtonReturnIcon = styled.TouchableOpacity`
         margin-top: 5%;
         margin-left: 5%;
     `
+
+
+export const ButtonModal = styled(Button)`
+    width: 80%;  
+`
 

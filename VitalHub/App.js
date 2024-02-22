@@ -14,6 +14,7 @@ import { ChangePassword } from './src/screens/ChangePassword/ChangePassword';
 import { CreateAccountFunc } from './src/screens/CreateAccount/CreateAccount';
 import { ProfileFunc } from './src/screens/Profile/Profile';
 import { HomeFunc } from './src/screens/Home/Home';
+import { FormRequire } from './src/screens/FormRequire/FormRequire';
 
 //instancia do StackNavigator
 const Stack = createNativeStackNavigator();
@@ -97,6 +98,12 @@ export default function App() {
           name='Home'
           component={HomeFunc}
           options={{title: 'Home'}}
+        />
+
+        <Stack.Screen
+          name='FormRequire'
+          component={FormRequire}
+          options={{title: 'Form_Require'}}
         />
 
       </Stack.Navigator>
