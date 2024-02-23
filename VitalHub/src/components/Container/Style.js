@@ -11,7 +11,7 @@ export const Container = styled.SafeAreaView`
 
 export const ContainerScroll = styled.ScrollView`
     margin-left: 10.55%;
-    width: 90%;
+    width: 100%;
     height: 90%;
     margin-bottom: 30px;
 `
@@ -34,6 +34,14 @@ export const DoubleView = styled.SafeAreaView`
     flex-direction: row;
     align-items:center;
     justify-content: space-between;
+`
+
+export const ScheduleModalView = styled(DoubleView)`
+    width: 100%;
+    max-width: 100%;
+    align-self: flex-start;
+    margin-top: 0px;
+    text-align: center;
 `
 
 export const BoxInput = styled.SafeAreaView`

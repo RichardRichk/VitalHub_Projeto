@@ -26,6 +26,10 @@ export const InputFormRequire = styled(Input)`
     font-family: "MontserratAlternates_600SemiBold";
 `
 
+export const InputScheduleModal = styled(Input)`
+    width: 100%;
+`
+
 export const InputVerify = styled.TextInput.attrs({placeholderTextColor: '#34898f'})`
     height: 62px;
     width: 16%;
@@ -39,6 +43,10 @@ export const InputVerify = styled.TextInput.attrs({placeholderTextColor: '#34898
     margin-bottom: 30px;
 `
 
+export const InputAppointmentLevel = styled(Input)`
+    width: 30%;
+`
+
 export const InputLabel = styled.Text`
     font-size: 16px;
     font-family: 'Quicksand_600SemiBold';
@@ -46,6 +54,7 @@ export const InputLabel = styled.Text`
     margin-top: 20px;
     color: #000000;
     align-items: start;
+    align-self: flex-start;
     justify-content: start;
 `
 

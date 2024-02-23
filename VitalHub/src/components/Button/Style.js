@@ -31,7 +31,6 @@ export const ButtonSecondary = styled(Button)`
     margin-top: 30px;
 `
 
-
 export const ButtonTextCard = styled.Text`
     color: ${(props) => props.situacao == "pendente" ? "#c81d25" : "#344f8f"};
     `
@@ -64,5 +63,10 @@ export const ButtonReturnIcon = styled.TouchableOpacity`
 
 export const ButtonModal = styled(Button)`
     width: 80%;  
+`
+
+export const ButtonScheduleModal = styled(Button)`
+    width: 100%;
+    margin-top: 30px;
 `
 
