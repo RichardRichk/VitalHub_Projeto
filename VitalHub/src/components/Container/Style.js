@@ -9,6 +9,10 @@ export const Container = styled.SafeAreaView`
     background-color: #fafafa;
 `
 
+export const ContainerWithMargin = styled.SafeAreaView`
+    margin-top: 35px;
+`
+
 export const ContainerScroll = styled.ScrollView`
     margin-left: 10.55%;
     width: 100%;

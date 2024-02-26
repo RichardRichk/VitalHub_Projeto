@@ -50,6 +50,8 @@ export const ClockCard = styled.View`
     border-radius: 5px;
     border: 1px solid black;
 
+    align-items: center;
+
     color: ${(props) => props.situacao == "pendente" ? "#E8FCFD" : "#F1F0F5"};
 `
 

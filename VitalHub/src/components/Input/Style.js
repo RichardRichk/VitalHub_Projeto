@@ -45,6 +45,7 @@ export const InputVerify = styled.TextInput.attrs({placeholderTextColor: '#34898
 
 export const InputAppointmentLevel = styled(Input)`
     width: 30%;
+    text-align: center;
 `
 
 export const InputLabel = styled.Text`
