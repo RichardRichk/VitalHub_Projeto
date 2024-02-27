@@ -20,7 +20,7 @@ const Consultas = [
 
 export const HomeFunc = ({ navigation }) => {
 
-    const [statusLista, setStatusLista] = useState("Pendente");
+    const [statusLista, setStatusLista] = useState("pendente");
     // Satate para os modais
     const [showModalCancel, setShowModalCancel] = useState(false);
     const [showModalAppointment, setShowModalAppointment] = useState(false);

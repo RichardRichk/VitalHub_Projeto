@@ -5,6 +5,7 @@ import { ButtonCard, ButtonTextCard } from "../Button/Style"
 import { AntDesign } from "@expo/vector-icons"
 
 
+
 export const CardAppointment = ({
     situacao = "pendente",
     onPressCancel,
@@ -50,7 +51,7 @@ export const CardAppointment = ({
                         ) : situacao == "pendente" ? (
 
                             <ButtonCard onPress={onPressCancel}>
-                                <ButtonTextCard situacao={situacao}>Cancelar</ButtonTextCard>
+                                <ButtonTextCard situacao={situacao}>Cancelar </ButtonTextCard>
                             </ButtonCard>
 
                         ) : (

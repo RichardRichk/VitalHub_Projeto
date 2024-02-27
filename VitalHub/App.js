@@ -16,6 +16,7 @@ import { ProfileFunc } from './src/screens/Profile/Profile';
 import { HomeFunc } from './src/screens/Home/Home';
 import { FormRequire } from './src/screens/FormRequire/FormRequire';
 import { ClinicSelect } from './src/screens/ClinicSelect/ClinicSelect';
+import { DoctorSelect } from './src/screens/DoctorSelect/DoctorSelect';
 
 //instancia do StackNavigator
 const Stack = createNativeStackNavigator();
@@ -111,6 +112,11 @@ export default function App() {
           name='ClinicSelect'
           component={ClinicSelect}
           options={{title: 'Clinic_Select'}}
+        />
+        <Stack.Screen
+          name='DoctorSelect'
+          component={DoctorSelect}
+          options={{title: 'Doctor_Select'}}
         />
 
       </Stack.Navigator>

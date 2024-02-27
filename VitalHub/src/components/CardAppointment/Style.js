@@ -45,14 +45,14 @@ export const ViewRow = styled.View`
 
 export const ClockCard = styled.View`
     flex-direction: row;
-    padding: 4px 23px;
+    padding: 3px 23px;
     gap: 6px;
     border-radius: 5px;
-    border: 1px solid black;
 
     align-items: center;
 
     color: ${(props) => props.situacao == "pendente" ? "#E8FCFD" : "#F1F0F5"};
+    background-color: ${(props) => props.situacao == "pendente" ? "#E8FCFD" : "#F1F0F5"};
 `
 
 export const TextBold = styled.Text`
