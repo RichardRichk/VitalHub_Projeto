@@ -1,29 +1,25 @@
 import { Title } from "../../components/Title/Style"
-import { CardDoctorSelect } from "../../components/CardClinicSelect/CardClinicSelect"
 import { Container, ContainerWithMargin } from "../../components/Container/Style"
 import { ContainerScrollWithMargin } from "./Style"
 import { ListComponent } from "../../components/List/List"
-import { ButtonSecondary, ButtonSecondaryTitle, ButtonWithMargin, TextButton } from "../../components/Button/Style"
+import { Button, ButtonSecondary, ButtonSecondaryTitle, TextButton } from "../../components/Button/Style"
 import { useState } from "react"
+import { CardDoctorSelect } from "../../components/CardDoctorSelect/CardDoctorSelect"
 
 export const DoctorSelect = ({navigation}) => {
 
     const [selected, setSelected] = useState('');
 
-    const image1 = require("../../assets/Images/SelectDoctor1.png");
-    const image2 = require("../../assets/Images/SelectDoctor2.png");
-    const image3 = require("../../assets/Images/SelectDoctor3.png");
-
     const doctorData = [
-        {id: 1, name: "Dra Alessandra", image: {image1}, specialty: "Demartologa, Esteticista"},
-        {id: 2, name: "Dra Alessandra", image: {image2}, specialty: "Demartologa, Esteticista"},
-        {id: 3, name: "Dra Alessandra", image: {image3}, specialty: "Demartologa, Esteticista"},
-        {id: 4, name: "Dra Alessandra", image: {image1}, specialty: "Demartologa, Esteticista"},
-        {id: 5, name: "Dra Alessandra", image: {image3}, specialty: "Demartologa, Esteticista"},
-        {id: 6, name: "Dra Alessandra", image: {image1}, specialty: "Demartologa, Esteticista"},
-        {id: 7, name: "Dra Alessandra", image: {image2}, specialty: "Demartologa, Esteticista"},
-        {id: 8, name: "Dra Alessandra", image: {image3}, specialty: "Demartologa, Esteticista"},
-        {id: 9, name: "Dra Alessandra", image: {image1}, specialty: "Demartologa, Esteticista"},
+        {id: 1, name: "Dra Alessandra", specialty: "Demartologa, Esteticista"},
+        {id: 2, name: "Dra Alessandra", specialty: "Demartologa, Esteticista"},
+        {id: 3, name: "Dra Alessandra", specialty: "Demartologa, Esteticista"},
+        {id: 4, name: "Dra Alessandra", specialty: "Demartologa, Esteticista"},
+        {id: 5, name: "Dra Alessandra", specialty: "Demartologa, Esteticista"},
+        {id: 6, name: "Dra Alessandra", specialty: "Demartologa, Esteticista"},
+        {id: 7, name: "Dra Alessandra", specialty: "Demartologa, Esteticista"},
+        {id: 8, name: "Dra Alessandra", specialty: "Demartologa, Esteticista"},
+        {id: 9, name: "Dra Alessandra", specialty: "Demartologa, Esteticista"},
     ]
 
     return(
@@ -38,7 +34,7 @@ export const DoctorSelect = ({navigation}) => {
 
         <ContainerScrollWithMargin>
 
-            {/* <ListComponent
+            <ListComponent
                 data={doctorData}
                 renderItem={({item})  =>
                 <CardDoctorSelect
@@ -49,21 +45,19 @@ export const DoctorSelect = ({navigation}) => {
                     name={item.name}
                     specialty={item.specialty}
                 />}
-            /> */}
-
-          <CardDoctorSelect/>
+            />
 
 
-            <ButtonWithMargin>
+
+        </ContainerScrollWithMargin>
+
+            <Button>
                 <TextButton>Continuar </TextButton>
-            </ButtonWithMargin>
+            </Button>
 
             <ButtonSecondary onPress={() => navigation.navigate("ClinicSelect")}>
                 <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
             </ButtonSecondary>
-
-        </ContainerScrollWithMargin>
-
 
         </Container>
 

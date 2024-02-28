@@ -9,26 +9,34 @@ import { AntDesign } from "@expo/vector-icons"
 export const CardAppointment = ({
     situacao = "pendente",
     onPressCancel,
-    onPressAppointment
+    onPressAppointment,
+    id,
+    image,
+    name,
+    age,
+    type,
+    time
 }) => {
+
+    image = require("../../assets/Images/ProfilePic.png")
 
     return (
         <ContainerCard>
 
             <ImageCard
-                source={require("../../assets/Images/ProfilePic.png")}
+                source={image}
             />
 
             <ContentCard>
 
                 <DataProfileCard>
 
-                    <ProfileName>Richk</ProfileName>
+                    <ProfileName>{name}</ProfileName>
 
                     <ProfileDataCard>
 
-                        <TextAge>19</TextAge>
-                        <TextType>Consulta</TextType>
+                        <TextAge>{age}</TextAge>
+                        <TextType>{type}</TextType>
 
                     </ProfileDataCard>
 
@@ -38,7 +46,7 @@ export const CardAppointment = ({
 
                     <ClockCard situacao={situacao}>
                         <AntDesign name="clockcircle" size={14} color={situacao == "pendente" ? "#49B3BA" : "8C8A97"} />
-                        <TextBold situacao={situacao} color={"#49B3BA"}>14:00 </TextBold>
+                        <TextBold situacao={situacao} color={"#49B3BA"}>{time} </TextBold>
                     </ClockCard>
 
 

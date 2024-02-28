@@ -1,7 +1,6 @@
 import { ContentCard, ClinicName, StarContent, StarText, ContentNamePlace, ContentStarStatus, ClinicAdress, CalendarCard, TextCalendarDays, ContainerCardClinicSelect, ContainerCardClinic, DoctorImage, DoctorContentCard, DoctorDataCard, DoctorName, DoctorSpecialty, ContainerCardDoctorSelect } from "./Style"
 import { AntDesign } from "@expo/vector-icons"
 import { FontAwesome6 } from '@expo/vector-icons'
-import { ContainerCard } from "../Container/Style"
 
 
 //////////////////////////////// INICIO CLINIC SELECT
@@ -105,63 +104,3 @@ export const CardClinicSelect = ({
 
 }
 //////////////////////////////// FIM CLINIC SELECT
-
-
-
-
-//////////////////////////////// INICIO DOCTOR SELECT
-export const CardDoctorSelect = ({
-    id,
-    image,
-    name,
-    specialty,
-    select,
-    onPress
-}) => {
-
-    if (select === id) {
-        <ContainerCard>
-
-            <DoctorImage
-                source={image}
-            />
-
-            <DoctorContentCard>
-
-                <DoctorDataCard>
-
-                    <DoctorName>{name}</DoctorName>
-
-                    <DoctorSpecialty>{specialty}</DoctorSpecialty>
-
-                </DoctorDataCard>
-
-            </DoctorContentCard>
-        </ContainerCard>
-
-    } else {
-
-        <ContainerCardDoctorSelect onPress={onPress}>
-
-            <DoctorImage
-                source={image}
-            />
-
-            <DoctorContentCard>
-
-                <DoctorDataCard>
-
-                    <DoctorName>{name}</DoctorName>
-
-                    <DoctorSpecialty>{specialty}</DoctorSpecialty>
-
-                </DoctorDataCard>
-
-            </DoctorContentCard>
-
-        </ContainerCardDoctorSelect>
-
-    }
-
-}
-//////////////////////////////// FIM DOCTOR SELECT

@@ -53,7 +53,7 @@ export const BoxInput = styled.SafeAreaView`
     flex-direction: column;
 `
 
-export const ContainerCard = styled.View`
+export const ContainerCard = styled.TouchableOpacity`
 
 width: 90%;
 height: 100px;

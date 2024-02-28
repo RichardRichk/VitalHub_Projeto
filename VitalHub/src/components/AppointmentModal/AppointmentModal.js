@@ -48,3 +48,45 @@ const AppointmentModal = ({ navigation ,visible, setShowModalAppointment, ...res
 };
 
 export default AppointmentModal;
+
+
+export const AppointmentDoctorModal = ({ navigation ,visible, setShowModalAppointment, id, name, specialty, crm,...rest }) => {
+
+    return (
+        <Modal {...rest} visible={visible} transparent={true} animationType="fade">
+
+            <PatientModal>
+
+                {/* Imagem */}
+
+
+                <ModalContent>
+
+                    <ImageModalAppointment
+                        source={image}
+                    />
+                    
+                    <Title>{name}</Title>
+
+                    <ContainerModalText>
+                        <ModalText>{specialty}</ModalText>
+
+                        <ModalText>{crm}</ModalText>
+                    </ContainerModalText>
+
+                    <ButtonModal onPress={() => navigation.navigate("")}>
+                        <TextButton>Ver Local da consulta</TextButton>
+                    </ButtonModal>
+
+                    <ButtonSecondary onPress={() => setShowModalDoctorAppointment(false)}>
+                        <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
+                    </ButtonSecondary>
+
+                </ModalContent>
+            </PatientModal>
+
+
+        </Modal>
+    );
+
+};

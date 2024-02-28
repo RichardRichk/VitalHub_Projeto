@@ -44,7 +44,6 @@ export const NavigationFunc = ({navigation}) => {
                 title="Doctor Select"
                 onPress={() => navigation.navigate("DoctorSelect")}
             />
-
         </View>
     )
 }

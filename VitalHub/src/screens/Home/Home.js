@@ -11,11 +11,12 @@ import AppointmentModal from "../../components/AppointmentModal/AppointmentModal
 import ScheduleModal from "../../components/ScheduleModal/ScheduleModal"
 
 const Consultas = [
-    { id: 1, nome: "Richk", situacao: "pendente" },
-    { id: 2, nome: "Richk", situacao: "realizado" },
-    { id: 3, nome: "Richk", situacao: "cancelado" },
-    { id: 4, nome: "Richk", situacao: "pendente" },
-    { id: 5, nome: "Richk", situacao: "realizado" }
+    { id: 1, name: "Richk", age:"45", type:"Rotina", time: "14:00", situacao: "pendente" },
+    { id: 2, name: "Richk", age:"45", type:"Rotina", time: "14:00", situacao: "realizado" },
+    { id: 3, name: "Richk", age:"45", type:"Rotina", time: "14:00", situacao: "pendente" },
+    { id: 4, name: "Richk", age:"45", type:"Rotina", time: "14:00", situacao: "cancelado" },
+    { id: 5, name: "Richk", age:"45", type:"Rotina", time: "14:00", situacao: "pendente" },
+    
 ]
 
 export const HomeFunc = ({ navigation }) => {
@@ -65,6 +66,11 @@ export const HomeFunc = ({ navigation }) => {
 
                             <CardAppointment
                                 situacao={item.situacao}
+                                id={item.id}
+                                name={item.name}
+                                age={item.age}
+                                type={item.type}
+                                time={item.time}
                                 onPressCancel={() => setShowModalCancel(true)}
                                 onPressAppointment={() => setShowModalAppointment(true)}
                             />

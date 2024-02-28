@@ -3,7 +3,7 @@ import { CardClinicSelect } from "../../components/CardClinicSelect/CardClinicSe
 import { Container, ContainerWithMargin } from "../../components/Container/Style"
 import { ContainerScrollWithMargin } from "./Style"
 import { ListComponent } from "../../components/List/List"
-import { ButtonSecondary, ButtonSecondaryTitle, ButtonWithMargin, TextButton } from "../../components/Button/Style"
+import { Button, ButtonSecondary, ButtonSecondaryTitle, TextButton } from "../../components/Button/Style"
 import { useState } from "react"
 
 export const ClinicSelect = ({navigation}) => {
@@ -49,16 +49,16 @@ export const ClinicSelect = ({navigation}) => {
             />
 
 
-            <ButtonWithMargin>
+
+        </ContainerScrollWithMargin>
+
+            <Button>
                 <TextButton>Continuar </TextButton>
-            </ButtonWithMargin>
+            </Button>
 
             <ButtonSecondary onPress={() => navigation.navigate("Home")}>
                 <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
             </ButtonSecondary>
-
-        </ContainerScrollWithMargin>
-
 
         </Container>
 
