@@ -44,6 +44,10 @@ export const NavigationFunc = ({navigation}) => {
                 title="Doctor Select"
                 onPress={() => navigation.navigate("DoctorSelect")}
             />
+            <Button 
+                title="Calendar Screen"
+                onPress={() => navigation.navigate("CalendarScreen")}
+            />
         </View>
     )
 }

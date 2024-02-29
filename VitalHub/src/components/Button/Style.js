@@ -18,6 +18,26 @@ export const ButtonWithMargin = styled(Button)`
     margin-top: 30px;
 `
 
+export const ButtonAppointmentLevel = styled.TouchableOpacity`
+    height: 62px;
+    width: 30%;
+
+    padding: 5px;
+
+    border: 2px solid #77CACF;
+    border-radius: 5px;
+
+    font-size: 40px;
+    font-family: 'Quicksand_600SemiBold';
+
+    margin-top: 10px;
+    margin-right: 3.55%;    
+    margin-bottom: 30px;
+
+    text-align: center;
+`
+
+
 export const GoogleButton = styled(Button)`
     margin-top: 15px;
     background-color: #FAFAFA;
@@ -42,6 +62,8 @@ export const TextButton = styled.Text`
     font-family: 'MontserratAlternates_700Bold';
     color: #FFFFFF;
     `
+
+
     export const ButtonSecondaryTitle = styled(TextButton)`
         text-transform: capitalize;
         text-decoration: underline;
@@ -66,6 +88,9 @@ export const ButtonModal = styled(Button)`
 `
 
 export const ButtonScheduleModal = styled(Button)`
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     width: 100%;
     margin-top: 30px;
 `

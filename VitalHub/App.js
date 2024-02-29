@@ -17,6 +17,7 @@ import { HomeFunc } from './src/screens/Home/Home';
 import { FormRequire } from './src/screens/FormRequire/FormRequire';
 import { ClinicSelect } from './src/screens/ClinicSelect/ClinicSelect';
 import { DoctorSelect } from './src/screens/DoctorSelect/DoctorSelect';
+import { CalendarScreen } from './src/screens/CalendarScreen/CalendarScreen';
 
 //instancia do StackNavigator
 const Stack = createNativeStackNavigator();
@@ -117,6 +118,11 @@ export default function App() {
           name='DoctorSelect'
           component={DoctorSelect}
           options={{title: 'Doctor_Select'}}
+        />
+        <Stack.Screen
+          name='CalendarScreen'
+          component={CalendarScreen}
+          options={{title: 'Calendar_Screen'}}
         />
 
       </Stack.Navigator>

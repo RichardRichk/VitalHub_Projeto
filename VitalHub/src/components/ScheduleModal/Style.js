@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ButtonAppointmentLevel, TextButton } from "../Button/Style";
 
 export const ModalContainer = styled.View`
   width: 100%;
@@ -23,3 +24,13 @@ export const ModalContent = styled.View`
   padding: 30px;
   border-radius: 10px 10px 0px 0px;
 `
+
+export const ButtonAppointmentLevelUrgency = styled(ButtonAppointmentLevel)`
+  width: 33%;
+`
+
+export const TextButtonAppointment = styled(TextButton)`
+  color: #77CACF;
+  padding: 13px;
+`
+
