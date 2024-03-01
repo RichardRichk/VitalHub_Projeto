@@ -1,4 +1,5 @@
 import { React, useState } from 'react';
+import { Text } from 'react-native';
 import { Calendar, LocaleConfig } from 'react-native-calendars';
 
 //Idioma
@@ -58,9 +59,11 @@ export const CalendarChoose = () => {
                 width: '100%', // Define a largura do calendário como 100% do contêiner pai
                 aspectRatio: 2, // Mantém a proporção do calendário como 2:1 (largura:altura)
                 backgroundColor: '#fafafa',
-                marginBottom: 130,
+                marginBottom: 170,
                 marginTop: 35,
             }}
+            
+            useNativeAndroidPickerStyle={false}
 
             //Esconde os dias de outros meses (Não esta sendo utilizado)
             //hideExtraDays
@@ -96,6 +99,13 @@ export const CalendarChoose = () => {
             markedDates={{
                 [selected]: { selected: true, disableTouchEvent: true }
             }}
+            customStyles={{
+                monthText: { fontFamily: "MontserratAlternates_600SemiBold", fontSize: 20 },
+                dayText: { fontFamily: "Quicksand_600SemiBold" },
+            }}
+            
+            // Substituir o componente de texto padrão por um personalizado para o título do mês (Linha feita com auxilio do GPT)
+            renderHeader={(date) => <Text style={{ fontFamily: 'MontserratAlternates_600SemiBold', fontSize: 20 }}>{date.toString('MMMM yyyy')}</Text>}
         />
     )
 }

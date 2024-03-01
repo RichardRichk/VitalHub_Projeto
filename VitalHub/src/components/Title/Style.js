@@ -27,3 +27,12 @@ color: gray;
 font-size: 16px;
 font-family: "Quicksand_600SemiBold";
 `
+
+export const SubTitleDataModal = styled(SubTitle)`
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: start;
+    align-items: start;
+    align-self: flex-start;
+    justify-content: start;
+`

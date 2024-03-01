@@ -1,13 +1,17 @@
 import styled from "styled-components";
+import { ModalText } from "../CancellationModal/Style";
 
 export const ContainerModalText = styled.View`
-    width: 50%;
+    width: 80%;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-self: center;
     justify-self: start;
-    margin-right: 11.97%;
-    margin-left: -10%;
+`
+
+export const ModalTextAppointment = styled(ModalText)`
+    width: auto;
 `
 
 export const ImageModalAppointment = styled.Image`

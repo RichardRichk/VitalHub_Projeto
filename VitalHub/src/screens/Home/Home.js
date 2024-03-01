@@ -19,6 +19,10 @@ const Consultas = [
     
 ]
 
+const AppointmentModalData = [
+    { id: 1, name: "Richk", ModalText1:"45 anos", ModalText2:"richk@gmail.com", ButtonProntuary:"Inserir Prontuario" },
+]
+
 export const HomeFunc = ({ navigation }) => {
 
     const [statusLista, setStatusLista] = useState("pendente");
@@ -85,12 +89,22 @@ export const HomeFunc = ({ navigation }) => {
                     visible={showModalCancel}
                     setShowModalCancel={setShowModalCancel}
                 />
-
+                
+                <ListComponent
+                data={AppointmentModalData}
+                renderItem={({item})  =>
                 <AppointmentModal
+                    id={item.id}
+                    name={item.name}
+                    ModalText1={item.ModalText1}
+                    ModalText2={item.ModalText2}
+                    ButtonProntuary={item.ButtonProntuary}
                     visible={showModalAppointment}
                     setShowModalAppointment={setShowModalAppointment}
                     navigation={navigation}
                 />
+                }
+            />
 
                 <ScheduleModal 
                 visible={showScheduleModal}
