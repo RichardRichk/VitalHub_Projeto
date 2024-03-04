@@ -18,6 +18,7 @@ import { FormRequire } from './src/screens/FormRequire/FormRequire';
 import { ClinicSelect } from './src/screens/ClinicSelect/ClinicSelect';
 import { DoctorSelect } from './src/screens/DoctorSelect/DoctorSelect';
 import { CalendarScreen } from './src/screens/CalendarScreen/CalendarScreen';
+import { ClinicAdress } from './src/screens/ClinicAdress/ClinicAdress';
 
 //instancia do StackNavigator
 const Stack = createNativeStackNavigator();
@@ -123,6 +124,11 @@ export default function App() {
           name='CalendarScreen'
           component={CalendarScreen}
           options={{title: 'Calendar_Screen'}}
+        />
+        <Stack.Screen
+          name='ClinicAdress'
+          component={ClinicAdress}
+          options={{title: 'Clinic_Adress'}}
         />
 
       </Stack.Navigator>

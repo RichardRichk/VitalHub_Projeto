@@ -30,14 +30,12 @@ export const ContainerHeader = styled(LinearGradient).attrs({ colors: ['#60BFC5'
 `
 
 
-export const DoubleView = styled.SafeAreaView`
-    width: 90%; 
-    max-width: 90%;
+export const DoubleView = styled.View`
+    width: 100%;
     margin-top:24px;
-    display: flex;
     flex-direction: row;
-    align-items:center;
-    justify-content: space-between;
+    align-self:center;
+    align-content: center;
 `
 
 export const ScheduleModalView = styled(DoubleView)`
@@ -48,8 +46,7 @@ export const ScheduleModalView = styled(DoubleView)`
     text-align: center;
 `
 
-export const BoxInput = styled.SafeAreaView`
-    display: flex;
+export const BoxInput = styled.View`
     flex-direction: column;
 `
 
@@ -59,13 +56,9 @@ width: 90%;
 height: 100px;
 margin-bottom: 12px;
 
-/* display: flex; */
+
 flex-direction: row;
-/* justify-content:space-between;
-align-items:center; */
 
-
-/* Colocar BoxShadow */
 
 padding: 10px 10px;
 gap:10px;

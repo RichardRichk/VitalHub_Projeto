@@ -59,3 +59,6 @@ export const InputDouble = styled(InputProfile)`
     width: 100%;
     margin-bottom: 30px;
 `
+
+export const InputNotEditable = styled(InputProfile).attrs({editable: false})`
+`

@@ -50,6 +50,15 @@ export const FormRequire = ({navigation}) => {
                     <ButtonSecondaryTitle>Cancelar </ButtonSecondaryTitle>
                 </ButtonSecondary>
 
+
+                {/* Conteudo Da Consultas Doutor */}
+
+                <InputLabel>Exames médicos</InputLabel>
+                <InputFormRequire
+                    placeholder="Nenhuma foto informada"
+                />
+                
+
             </ContainerScroll>
 
         </Container>

@@ -5,6 +5,7 @@ import { InputDouble, InputLabel, InputProfile } from "../../components/Input/St
 import { ModalProfile } from "../../components/Modal/Style"
 import { SubTitle, Title } from "../../components/Title/Style"
 import { Button, TextButton } from "../../components/Button/Style"
+import { ContentInput } from "../../components/ContentAccount/Style"
 
 export const ProfileFunc = ({navigation}) => {
     return(
@@ -38,7 +39,7 @@ export const ProfileFunc = ({navigation}) => {
                 placeholder= "Rua Vicenso Silva, 987"
             />
 
-            <DoubleView>
+            <ContentInput>
                 <BoxInput>
                     <InputLabel>Cep</InputLabel>
                     <InputDouble
@@ -52,7 +53,7 @@ export const ProfileFunc = ({navigation}) => {
                         placeholder="Diadema-SP"
                     />
                 </BoxInput>
-            </DoubleView>
+            </ContentInput>
 
             <Button>
 

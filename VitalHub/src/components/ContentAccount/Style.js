@@ -7,6 +7,11 @@ export const ContentAccount = styled.View`
     justify-content: center;
 `
 
+export const ContentInput = styled(ContentAccount)`
+    width: 90%;
+    justify-content: space-between;
+`
+
 export const ContentVerify = styled(ContentAccount)`
     margin-top: 20px;
     width: 88.88%;
