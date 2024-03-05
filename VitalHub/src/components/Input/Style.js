@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Input = styled.TextInput.attrs({placeholderTextColor: '#34898f'})`
     width: 88.88%;
     height: 53px;
@@ -40,7 +39,9 @@ export const InputVerify = styled.TextInput.attrs({placeholderTextColor: '#34898
     font-size: 40px;
     font-family: 'Quicksand_600SemiBold';
     text-align: center;
-    margin-right: 5.55%;    
+    color: #34898f;
+    margin-right: 5.55%; 
+    margin-left: 5.83%;  
     margin-bottom: 30px;
 `
 
@@ -61,4 +62,9 @@ export const InputDouble = styled(InputProfile)`
 `
 
 export const InputNotEditable = styled(InputProfile).attrs({editable: false})`
+`
+
+export const InputFormNotEditable = styled(InputFormRequire).attrs({placeholderTextColor: '#4E4B59', editable: false})`
+    border: 1px solid #F5F3F3;
+    background-color: #F5F3F3;
 `

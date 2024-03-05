@@ -13,8 +13,8 @@ export const ContentInput = styled(ContentAccount)`
 `
 
 export const ContentVerify = styled(ContentAccount)`
-    margin-top: 20px;
     width: 88.88%;
+    margin-top: 20px;
 `
 
 export const ContentText = styled.Text`

@@ -95,3 +95,21 @@ export const ButtonScheduleModal = styled(Button)`
     margin-top: 30px;
 `
 
+export const ButtonPhoto = styled.TouchableOpacity`
+width: 44%;
+height: 44px;
+margin-top: 10px;
+
+flex-direction:row ;
+justify-content: center;
+align-items: center;
+
+border-radius:5px;
+background-color: #49B3BA;
+font-family: "MontserratAlternates_600SemiBold";
+font-weight: bold;
+font-size: 14px;
+
+gap: 10px;
+`
+

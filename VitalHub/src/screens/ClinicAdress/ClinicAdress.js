@@ -24,7 +24,7 @@ export const ClinicAdress = ({ navigation }) => {
                     placeholder="Rua Vicenso Silva, 987"
                 />
 
-                <ContentInput>
+                <DoubleView>
 
 
                     <BoxInput>
@@ -40,7 +40,7 @@ export const ClinicAdress = ({ navigation }) => {
                             placeholder="Moema-SP"
                         />
                     </BoxInput>
-                </ContentInput>
+                </DoubleView>
 
             </ContainerScroll>
         </Container>

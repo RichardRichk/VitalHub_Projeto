@@ -31,11 +31,12 @@ export const ContainerHeader = styled(LinearGradient).attrs({ colors: ['#60BFC5'
 
 
 export const DoubleView = styled.View`
-    width: 100%;
+    width: 90%;
     margin-top:24px;
     flex-direction: row;
-    align-self:center;
-    align-content: center;
+    align-self:flex-start;
+    justify-content: space-between;
+
 `
 
 export const ScheduleModalView = styled(DoubleView)`

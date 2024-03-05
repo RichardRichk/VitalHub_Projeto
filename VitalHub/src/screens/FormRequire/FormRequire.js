@@ -1,9 +1,11 @@
-import { ButtonSecondary, ButtonSecondaryTitle, ButtonWithMargin, TextButton } from "../../components/Button/Style"
-import { Container, ContainerScroll } from "../../components/Container/Style"
+import { ButtonPhoto, ButtonSecondary, ButtonSecondaryTitle, ButtonWithMargin, TextButton } from "../../components/Button/Style"
+import { Container, ContainerScroll, DoubleView } from "../../components/Container/Style"
 import { HeaderPhoto, HeaderPhotoContainer } from "../../components/HeaderPhoto/Style"
-import { Input, InputFormRequire, InputLabel } from "../../components/Input/Style"
+import { Input, InputFormNotEditable, InputFormRequire, InputLabel } from "../../components/Input/Style"
 import { ModalFormRequire } from "../../components/Modal/Style"
 import { SubTitle, Title } from "../../components/Title/Style"
+import { AntDesign } from "@expo/vector-icons"
+import { ButtonSecondaryForm, ButtonSecondaryFormTitle, HR } from "./Style"
 
 export const FormRequire = ({navigation}) => {
 
@@ -54,10 +56,37 @@ export const FormRequire = ({navigation}) => {
                 {/* Conteudo Da Consultas Doutor */}
 
                 <InputLabel>Exames médicos</InputLabel>
-                <InputFormRequire
-                    placeholder="Nenhuma foto informada"
+                <InputFormNotEditable
+                    placeholder="               Nenhuma foto informada"
+                />
+
+                <DoubleView>
+
+                    <ButtonPhoto>
+                        <TextButton>
+                            <AntDesign
+                                name= "camera"
+                                size={24}
+                            />
+                        </TextButton>
+                        <TextButton>Enviar</TextButton>
+                    </ButtonPhoto>
+
+                    <ButtonSecondaryForm>
+                        <ButtonSecondaryFormTitle>Cancelar</ButtonSecondaryFormTitle>
+                    </ButtonSecondaryForm>
+
+                </DoubleView>
+
+                <HR/>
+
+                <InputFormNotEditable
+                    placeholder="Resultado do exame de sangue: tudo normal "
                 />
                 
+                <ButtonSecondary>
+                    <ButtonSecondaryTitle>Voltar</ButtonSecondaryTitle>
+                </ButtonSecondary>
 
             </ContainerScroll>
 

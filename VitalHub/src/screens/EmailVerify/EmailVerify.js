@@ -28,9 +28,11 @@ export const EmailVerify = ({navigation}) => {
 
             <ContentVerify>
                 <InputVerify
+                    maxLength={1}
                     placeholder= "0"
                 />
                 <InputVerify
+                    maxLength={1}
                     placeholder= "0"
                 />
                 <InputVerify

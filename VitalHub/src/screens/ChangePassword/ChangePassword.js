@@ -34,6 +34,7 @@ export const ChangePassword = ({navigation}) =>{
             <ButtonWithMargin>
                 <TextButton>CONFIRMAR NOVA SENHA</TextButton>
             </ButtonWithMargin>
+
         </Container>
     )
 }

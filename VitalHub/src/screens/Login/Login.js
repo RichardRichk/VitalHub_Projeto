@@ -7,6 +7,11 @@ import { Button, GoogleButton, TextButton, TextGoogleButton } from "../../compon
 import { ContentAccount, ContentForgot, ContentText } from "../../components/ContentAccount/Style"
 
 export const LoginFunc = ({navigation}) => {
+
+    async function Login(){
+        navigation.navigate("Main")
+    }
+
     return(
         <Container>
 
@@ -34,6 +39,7 @@ export const LoginFunc = ({navigation}) => {
 
             
             <Button
+            onPress={() => Login()}
             >
                 <TextButton>ENTRAR</TextButton>
             </Button>
