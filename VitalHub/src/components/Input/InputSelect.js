@@ -2,7 +2,7 @@ import { StyleSheet, View } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 import { AntDesign } from '@expo/vector-icons'
 
-export const InputSelect = () => {
+export const InputSelect = ({ onValueChange }) => {
     return (
             <RNPickerSelect
 
@@ -18,9 +18,9 @@ export const InputSelect = () => {
                     return <AntDesign name="caretdown" size={24} color="#60BFC5" style={pickerSelectStyles.icon} />;
                 }}
                 items={[
-                    { label: '16h30m', value: 'hour1' },
-                    { label: '12h', value: 'hour2' },
-                    { label: '08h30m', value: 'hour3' }
+                    // { label: '16h30m', value: 'hour1' },
+                    // { label: '12h', value: 'hour2' },
+                    // { label: '08h30m', value: 'hour3' }
                 ]}
             />
     )

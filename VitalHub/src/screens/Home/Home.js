@@ -35,7 +35,9 @@ export const HomeFunc = ({ navigation }) => {
     return (
         <Container>
             {/* Header */}
-            <Header />
+            <Header 
+                navigation={navigation}
+            />
 
             <Calendar />
 
@@ -76,7 +78,8 @@ export const HomeFunc = ({ navigation }) => {
                                 type={item.type}
                                 time={item.time}
                                 onPressCancel={() => setShowModalCancel(true)}
-                                onPressAppointment={() => setShowModalAppointment(true)}
+                                onPressAppointment={() => navigation.navigate('FormRequire')}
+                                onPressCard={() => setShowModalAppointment(true)}
                             />
 
                         )

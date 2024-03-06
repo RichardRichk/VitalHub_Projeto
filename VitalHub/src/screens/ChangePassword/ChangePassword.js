@@ -31,7 +31,7 @@ export const ChangePassword = ({navigation}) =>{
                 placeholder= "Confirmar nova senha"
             />
 
-            <ButtonWithMargin>
+            <ButtonWithMargin onPress={() => navigation.replace('Login')}>
                 <TextButton>CONFIRMAR NOVA SENHA</TextButton>
             </ButtonWithMargin>
 

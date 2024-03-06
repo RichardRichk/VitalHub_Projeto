@@ -51,11 +51,11 @@ export const DoctorSelect = ({navigation}) => {
 
         </ContainerScrollWithMargin>
 
-            <Button>
+            <Button onPress={() => navigation.navigate("CalendarScreen")}>
                 <TextButton>Continuar </TextButton>
             </Button>
 
-            <ButtonSecondary onPress={() => navigation.navigate("ClinicSelect")}>
+            <ButtonSecondary onPress={() => navigation.replace("Main")}>
                 <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
             </ButtonSecondary>
 

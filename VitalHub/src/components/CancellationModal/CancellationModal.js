@@ -16,7 +16,7 @@ const CancellationModal = ({visible, setShowModalCancel, ...rest}) => {
                     Ao cancelar essa consulta, abrirá uma possível disponibilidade no seu horário, deseja mesmo cancelar essa consulta?
                     </ModalText>
 
-                    <ButtonModal>
+                    <ButtonModal onPress={() => {setShowModalCancel(false); alert("Consulta Cancelada")}}>
                         <TextButton>Confirmar</TextButton>
                     </ButtonModal>
 

@@ -11,7 +11,7 @@ export const EmailVerify = ({navigation}) => {
             
             {/* Criar componente para agilizar */}
             <ButtonReturnIcon
-                onPress={() => navigation.navigate('Forgot_Password')}
+                onPress={() => navigation.replace('Login')}
             >
                 <ReturnIcon
                     source={require('../../assets/Images/Icon_Back.png')}
@@ -44,7 +44,7 @@ export const EmailVerify = ({navigation}) => {
             </ContentVerify>
 
             <Button
-                onPress={() => navigation.navigate('Change_Password')}
+                onPress={() => navigation.replace('Change_Password')}
             >
                 <TextButton>ENTRAR</TextButton>
             </Button>

@@ -27,13 +27,13 @@ export const CreateAccountFunc = ({navigation}) => {
                 placeholder= "Confirmar Senha"
             />
 
-            <ButtonWithMargin>
+            <ButtonWithMargin onPress={() => navigation.replace('Login')}>
                 <TextButton>CADASTRAR</TextButton>
             </ButtonWithMargin>
 
             <ContentAccount>
                 <ContentResend
-                    onPress={() => navigation.navigate('Login')}
+                    onPress={() => navigation.replace('Login')}
                 >
                     Cancelar
                     

@@ -9,7 +9,7 @@ import { ContentAccount, ContentForgot, ContentText } from "../../components/Con
 export const LoginFunc = ({navigation}) => {
 
     async function Login(){
-        navigation.navigate("Main")
+        navigation.replace("Main")
     }
 
     return(

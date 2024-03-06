@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BoxUser = styled.View`
+export const BoxUser = styled.TouchableOpacity`
     margin-top: 20;
     flex-direction: row;
     align-items: center;

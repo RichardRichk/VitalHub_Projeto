@@ -52,11 +52,11 @@ export const ClinicSelect = ({navigation}) => {
 
         </ContainerScrollWithMargin>
 
-            <Button>
+            <Button onPress={() => navigation.navigate("DoctorSelect")}>
                 <TextButton>Continuar </TextButton>
             </Button>
 
-            <ButtonSecondary onPress={() => navigation.navigate("Home")}>
+            <ButtonSecondary onPress={() => navigation.replace("Main")}>
                 <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
             </ButtonSecondary>
 

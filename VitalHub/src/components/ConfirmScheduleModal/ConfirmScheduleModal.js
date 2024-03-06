@@ -27,11 +27,11 @@ export const ConfirmScheduleModal = ({navigation, visible, setShowModalConfirmAp
                 <InputLabel>Tipo da consulta:</InputLabel>
                 <SubTitleDataModal>{AppointmentType}</SubTitleDataModal>
 
-                <ButtonWithMargin>
+                <ButtonWithMargin onPress={() => navigation.replace("Main")}>
                     <TextButton>Confirmar</TextButton>
                 </ButtonWithMargin>
 
-                <ButtonSecondary onPress={() => setShowModalConfirmAppointment(false)}>
+                <ButtonSecondary onPress={() => {setShowModalConfirmAppointment(false); navigation.replace("Main")}}>
                     <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
                 </ButtonSecondary>
 

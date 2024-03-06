@@ -35,11 +35,11 @@ const ScheduleModal = ({navigation, visible, setShowScheduleModal, ...rest}) => 
                         placeholder="Informe a localização"
                     />
 
-                    <ButtonScheduleModal onPress={() => navigation.navigate("ClinicSelect")}>
+                    <ButtonScheduleModal onPress={() => {setShowScheduleModal(false); navigation.navigate("ClinicSelect")}}>
                         <TextButton>Continuar </TextButton>
                     </ButtonScheduleModal>
 
-                    <ButtonSecondary onPress={() => setShowScheduleModal(false)}>
+                    <ButtonSecondary onPress={() => {setShowScheduleModal(false)}}>
                         <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
                     </ButtonSecondary>
 

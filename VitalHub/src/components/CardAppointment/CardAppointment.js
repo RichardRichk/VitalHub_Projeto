@@ -10,6 +10,7 @@ export const CardAppointment = ({
     situacao = "pendente",
     onPressCancel,
     onPressAppointment,
+    onPressCard,
     id,
     image,
     name,
@@ -21,7 +22,7 @@ export const CardAppointment = ({
     image = require("../../assets/Images/ProfilePic.png")
 
     return (
-        <ContainerCard>
+        <ContainerCard onPress={onPressCard}>
 
             <ImageCard
                 source={image}

@@ -2,12 +2,12 @@ import { ContainerHeader } from "../Container/Style"
 import { BoxUser, DataUser, ImageUser, NameUser, TextDefault } from "./Style"
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-export const Header = () => {
+export const Header = ({navigation}) => {
     return (
         <ContainerHeader>
             
 
-            <BoxUser>
+            <BoxUser onPress={() => navigation.navigate("Profile")}>
 
                 <ImageUser
                     source={require("../../assets/Images/DoctorPhoto.png")}

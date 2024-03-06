@@ -8,7 +8,7 @@ import { ContainerCalendar, ContainerSelect } from "./Style";
 import { ConfirmScheduleModal } from "../../components/ConfirmScheduleModal/ConfirmScheduleModal";
 import { ListComponent } from "../../components/List/List";
 
-export const CalendarScreen = ({ navigation }) => {
+export const CalendarScreen = ({ navigation, onValueChange }) => {
 
     const [showModalConfirmAppointment, setShowModalConfirmAppointment] = useState(false);
 
@@ -33,7 +33,7 @@ export const CalendarScreen = ({ navigation }) => {
                 <TextButton>Confirmar</TextButton>
             </Button>
 
-            <ButtonSecondary>
+            <ButtonSecondary onPress={() => navigation.replace("Main")}>
                 <ButtonSecondaryTitle>Cancelar</ButtonSecondaryTitle>
             </ButtonSecondary>
 

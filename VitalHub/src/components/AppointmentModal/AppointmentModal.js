@@ -30,7 +30,7 @@ const AppointmentModal = ({ navigation ,visible, setShowModalAppointment, id, na
                         <ModalTextAppointment>{ModalText2} </ModalTextAppointment>
                     </ContainerModalText>
 
-                    <ButtonModal onPress={() => navigation.navigate("FormRequire")}>
+                <ButtonModal onPress={() => {setShowModalAppointment(false); navigation.navigate("FormRequire")}}>
                         <TextButton>{ButtonProntuary}</TextButton>
                     </ButtonModal>
 
@@ -74,7 +74,7 @@ export const AppointmentDoctorModal = ({ navigation ,visible, setShowModalAppoin
                         <ModalText>{crm}</ModalText>
                     </ContainerModalText>
 
-                    <ButtonModal onPress={() => navigation.navigate("")}>
+                    <ButtonModal onPress={() => {setShowModalDoctorAppointment(false); navigation.replace("ClinicAdress")}}>
                         <TextButton>Ver Local da consulta</TextButton>
                     </ButtonModal>
 

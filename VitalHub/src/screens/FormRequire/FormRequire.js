@@ -1,4 +1,4 @@
-import { ButtonPhoto, ButtonSecondary, ButtonSecondaryTitle, ButtonWithMargin, TextButton } from "../../components/Button/Style"
+import { Button, ButtonPhoto, ButtonSecondary, ButtonSecondaryTitle, ButtonWithMargin, TextButton } from "../../components/Button/Style"
 import { Container, ContainerScroll, DoubleView } from "../../components/Container/Style"
 import { HeaderPhoto, HeaderPhotoContainer } from "../../components/HeaderPhoto/Style"
 import { Input, InputFormNotEditable, InputFormRequire, InputLabel } from "../../components/Input/Style"
@@ -48,6 +48,10 @@ export const FormRequire = ({navigation}) => {
                     <TextButton>Salvar</TextButton>
                 </ButtonWithMargin>
 
+                <ButtonWithMargin>
+                    <TextButton>Editar </TextButton>
+                </ButtonWithMargin>
+
                 <ButtonSecondary onPress={() => navigation.navigate("Home")}>
                     <ButtonSecondaryTitle>Cancelar </ButtonSecondaryTitle>
                 </ButtonSecondary>
@@ -72,7 +76,7 @@ export const FormRequire = ({navigation}) => {
                         <TextButton>Enviar</TextButton>
                     </ButtonPhoto>
 
-                    <ButtonSecondaryForm>
+                    <ButtonSecondaryForm onPress={() => navigation.replace("Home")}>
                         <ButtonSecondaryFormTitle>Cancelar</ButtonSecondaryFormTitle>
                     </ButtonSecondaryForm>
 
@@ -84,7 +88,7 @@ export const FormRequire = ({navigation}) => {
                     placeholder="Resultado do exame de sangue: tudo normal "
                 />
                 
-                <ButtonSecondary>
+                <ButtonSecondary onPress={() => navigation.replace("Home")}>
                     <ButtonSecondaryTitle>Voltar</ButtonSecondaryTitle>
                 </ButtonSecondary>
 
