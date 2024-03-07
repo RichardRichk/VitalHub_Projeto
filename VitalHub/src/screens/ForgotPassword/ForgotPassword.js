@@ -10,7 +10,7 @@ export const ForgotPassword = ({navigation}) => {
 
             {/* Criar componente para agilizar */}
             <ButtonReturnIcon
-                onPress={() => navigation.navigate('Login')}
+                onPress={() => navigation.replace('Login')}
             >
 
                 <ReturnIcon

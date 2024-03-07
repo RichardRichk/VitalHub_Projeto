@@ -10,21 +10,24 @@ import CancellationModal from "../../components/CancellationModal/CancellationMo
 import AppointmentModal from "../../components/AppointmentModal/AppointmentModal"
 import ScheduleModal from "../../components/ScheduleModal/ScheduleModal"
 
+
+
 const Consultas = [
-    { id: 1, name: "Richk", age:"45", type:"Rotina", time: "14:00", situacao: "pendente" },
-    { id: 2, name: "Richk", age:"45", type:"Rotina", time: "14:00", situacao: "realizado" },
-    { id: 3, name: "Richk", age:"45", type:"Rotina", time: "14:00", situacao: "pendente" },
-    { id: 4, name: "Richk", age:"45", type:"Rotina", time: "14:00", situacao: "cancelado" },
-    { id: 5, name: "Richk", age:"45", type:"Rotina", time: "14:00", situacao: "pendente" },
-    
+    { id: 1, name: "Richk", age: "45", type: "Rotina", time: "14:00", situacao: "pendente" },
+    { id: 2, name: "Richk", age: "45", type: "Rotina", time: "14:00", situacao: "realizado" },
+    { id: 3, name: "Richk", age: "45", type: "Rotina", time: "14:00", situacao: "pendente" },
+    { id: 4, name: "Richk", age: "45", type: "Rotina", time: "14:00", situacao: "cancelado" },
+    { id: 5, name: "Richk", age: "45", type: "Rotina", time: "14:00", situacao: "pendente" },
+
 ]
 
 const AppointmentModalData = [
-    { id: 1, name: "Richk", ModalText1:"45 anos", ModalText2:"richk@gmail.com", ButtonProntuary:"Inserir Prontuario" },
+    { id: 1, name: "Richk", ModalText1: "45 anos", ModalText2: "richk@gmail.com", ButtonProntuary: "Inserir Prontuario" },
 ]
 
 export const HomeFunc = ({ navigation }) => {
 
+    const [userType, setuserType] = useState("Paciente");
     const [statusLista, setStatusLista] = useState("pendente");
     // Satate para os modais
     const [showModalCancel, setShowModalCancel] = useState(false);
@@ -35,7 +38,7 @@ export const HomeFunc = ({ navigation }) => {
     return (
         <Container>
             {/* Header */}
-            <Header 
+            <Header
                 navigation={navigation}
             />
 
@@ -71,6 +74,8 @@ export const HomeFunc = ({ navigation }) => {
                         statusLista == item.situacao && (
 
                             <CardAppointment
+                                navigation={navigation}
+                                userType={userType}
                                 situacao={item.situacao}
                                 id={item.id}
                                 name={item.name}
@@ -78,7 +83,7 @@ export const HomeFunc = ({ navigation }) => {
                                 type={item.type}
                                 time={item.time}
                                 onPressCancel={() => setShowModalCancel(true)}
-                                onPressAppointment={() => navigation.navigate('FormRequire')}
+                                onPressAppointment={() => navigation.navigate('FormRequire', userType)}
                                 onPressCard={() => setShowModalAppointment(true)}
                             />
 
@@ -92,38 +97,49 @@ export const HomeFunc = ({ navigation }) => {
                     visible={showModalCancel}
                     setShowModalCancel={setShowModalCancel}
                 />
-                
-                <ListComponent
-                data={AppointmentModalData}
-                renderItem={({item})  =>
-                <AppointmentModal
-                    id={item.id}
-                    name={item.name}
-                    ModalText1={item.ModalText1}
-                    ModalText2={item.ModalText2}
-                    ButtonProntuary={item.ButtonProntuary}
-                    visible={showModalAppointment}
-                    setShowModalAppointment={setShowModalAppointment}
-                    navigation={navigation}
-                />
-                }
-            />
 
-                <ScheduleModal 
-                visible={showScheduleModal}
-                setShowScheduleModal={setShowScheduleModal}
-                navigation={navigation}
+                <ListComponent
+                    data={AppointmentModalData}
+                    renderItem={({ item }) =>
+                        <AppointmentModal
+                            id={item.id}
+                            name={item.name}
+                            ModalText1={item.ModalText1}
+                            ModalText2={item.ModalText2}
+                            ButtonProntuary={item.ButtonProntuary}
+                            visible={showModalAppointment}
+                            setShowModalAppointment={setShowModalAppointment}
+                            navigation={navigation}
+                            situacao={statusLista}
+                        />
+                    }
+                />
+
+                <ScheduleModal
+                    visible={showScheduleModal}
+                    setShowScheduleModal={setShowScheduleModal}
+                    navigation={navigation}
                 />
 
             </ContainerScroll>
 
-            <CreateAppointment onPress={() => {setShowScheduleModal(true)}}>
+            {
+                userType == "Paciente" ? (
+                    <>
+                    </>
+                ) : (
 
-                <StethoscopeImage
 
-                    source={require("../../assets/Images/stethoscope_medical.png")}
-                />
-            </CreateAppointment>
+                    <CreateAppointment onPress={() => { setShowScheduleModal(true) }}>
+
+                        <StethoscopeImage
+
+                            source={require("../../assets/Images/stethoscope_medical.png")}
+                        />
+                    </CreateAppointment>
+
+                )
+            }
 
         </Container>
     )

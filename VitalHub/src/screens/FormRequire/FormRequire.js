@@ -6,14 +6,16 @@ import { ModalFormRequire } from "../../components/Modal/Style"
 import { SubTitle, Title } from "../../components/Title/Style"
 import { AntDesign } from "@expo/vector-icons"
 import { ButtonSecondaryForm, ButtonSecondaryFormTitle, HR } from "./Style"
+import { useState } from "react"
 
-export const FormRequire = ({navigation}) => {
+export const FormRequire = ({ navigation }) => {
 
+    const [userType, setuserType] = useState("Paciente");
     const image = require("../../assets/Images/ProfilePic.png")
 
-    return(
+    return (
         <Container>
-            
+
             <HeaderPhotoContainer>
                 <HeaderPhoto
                     source={image}
@@ -59,38 +61,49 @@ export const FormRequire = ({navigation}) => {
 
                 {/* Conteudo Da Consultas Doutor */}
 
-                <InputLabel>Exames médicos</InputLabel>
-                <InputFormNotEditable
-                    placeholder="               Nenhuma foto informada"
-                />
+                {
+                    userType == "Paciente" ? (
+                        <>
+                        </>
+                    ) : (
+                        <>
 
-                <DoubleView>
-
-                    <ButtonPhoto>
-                        <TextButton>
-                            <AntDesign
-                                name= "camera"
-                                size={24}
+                            <InputLabel>Exames médicos</InputLabel>
+                            <InputFormNotEditable
+                                placeholder="               Nenhuma foto informada"
                             />
-                        </TextButton>
-                        <TextButton>Enviar</TextButton>
-                    </ButtonPhoto>
 
-                    <ButtonSecondaryForm onPress={() => navigation.replace("Home")}>
-                        <ButtonSecondaryFormTitle>Cancelar</ButtonSecondaryFormTitle>
-                    </ButtonSecondaryForm>
+                            <DoubleView>
 
-                </DoubleView>
+                                <ButtonPhoto>
+                                    <TextButton>
+                                        <AntDesign
+                                            name="camera"
+                                            size={24}
+                                        />
+                                    </TextButton>
+                                    <TextButton>Enviar</TextButton>
+                                </ButtonPhoto>
 
-                <HR/>
+                                <ButtonSecondaryForm onPress={() => navigation.replace("Home")}>
+                                    <ButtonSecondaryFormTitle>Cancelar</ButtonSecondaryFormTitle>
+                                </ButtonSecondaryForm>
 
-                <InputFormNotEditable
-                    placeholder="Resultado do exame de sangue: tudo normal "
-                />
-                
-                <ButtonSecondary onPress={() => navigation.replace("Home")}>
-                    <ButtonSecondaryTitle>Voltar</ButtonSecondaryTitle>
-                </ButtonSecondary>
+                            </DoubleView>
+
+                            <HR />
+
+                            <InputFormNotEditable
+                                placeholder="Resultado do exame de sangue: tudo normal "
+                            />
+
+                            <ButtonSecondary onPress={() => navigation.replace("Main")}>
+                                <ButtonSecondaryTitle>Voltar</ButtonSecondaryTitle>
+                            </ButtonSecondary>
+                        </>
+
+                    )
+                }
 
             </ContainerScroll>
 

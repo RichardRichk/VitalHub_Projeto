@@ -8,7 +8,7 @@ export const ChangePassword = ({navigation}) =>{
     return(
         <Container>
             <ButtonReturnIcon
-                onPress={() => navigation.navigate('Forgot_Password')}
+                onPress={() => navigation.replace('Login')}
             >
                 <ReturnIcon
                     source={require('../../assets/Images/Icon_Back.png')}

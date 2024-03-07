@@ -3,10 +3,13 @@ import { ContainerCard } from "../Container/Style"
 import { ClockCard, ContentCard, DataProfileCard, ImageCard, ProfileDataCard, ProfileName, TextAge, TextBold, TextType, ViewRow } from "./Style"
 import { ButtonCard, ButtonTextCard } from "../Button/Style"
 import { AntDesign } from "@expo/vector-icons"
+import { useState } from "react"
 
 
 
 export const CardAppointment = ({
+    navigation,
+    userType,
     situacao = "pendente",
     onPressCancel,
     onPressAppointment,
@@ -22,7 +25,15 @@ export const CardAppointment = ({
     image = require("../../assets/Images/ProfilePic.png")
 
     return (
-        <ContainerCard onPress={onPressCard}>
+        <ContainerCard onPress={() => {
+        
+            if (situacao === "realizado" && userType === "Paciente") {
+                navigation.replace("FormRequire");
+            } else if(situacao == "pendente" || situacao === "realizado"){
+                onPressCard();
+            }
+        }
+        }>
 
             <ImageCard
                 source={image}
