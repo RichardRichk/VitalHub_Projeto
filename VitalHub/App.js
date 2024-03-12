@@ -53,6 +53,11 @@ export default function App() {
       <Stack.Navigator
         screenOptions={{headerShown: false}}
       >
+        <Stack.Screen
+          name='ClinicAdress'
+          component={ClinicAdress}
+          options={{title: 'Clinic_Adress'}}
+        />
 
         <Stack.Screen
           name='Login'
@@ -123,11 +128,11 @@ export default function App() {
           component={CalendarScreen}
           options={{title: 'Calendar_Screen'}}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name='ClinicAdress'
           component={ClinicAdress}
           options={{title: 'Clinic_Adress'}}
-        />
+        /> */}
 
       </Stack.Navigator>
 

@@ -1,18 +1,16 @@
 import { BoxInput, Container, ContainerScroll, ContainerWithMargin, DoubleView } from "../../components/Container/Style"
-import { ContentAccount, ContentInput } from "../../components/ContentAccount/Style"
 import { InputDouble, InputLabel, InputNotEditable } from "../../components/Input/Style"
+import { Map } from "../../components/Map/Map"
 import { SubTitle, Title } from "../../components/Title/Style"
 import { MapImage } from "./Style"
 
 export const ClinicAdress = ({ navigation }) => {
 
-    const image = require("../../assets/Images/MapAdress.png")
-
     return (
         <Container>
-            <MapImage
-                source={image}
-            />
+            <MapImage>
+                <Map/>
+            </MapImage>
 
             <Title>Clínica Natureh</Title>
             <SubTitle>São Paulo, SP</SubTitle>
