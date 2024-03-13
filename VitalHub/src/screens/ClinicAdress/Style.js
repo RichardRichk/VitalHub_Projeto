@@ -5,3 +5,7 @@ export const MapImage = styled.View`
     height: 50.6%;
     margin-bottom: 30px;
 `
+
+export const reload = styled.View`
+    
+`

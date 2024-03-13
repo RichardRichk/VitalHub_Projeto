@@ -7,10 +7,11 @@ import { MapImage } from "./Style"
 export const ClinicAdress = ({ navigation }) => {
 
     return (
-        <Container>
-            <MapImage>
+        <>
+        
                 <Map/>
-            </MapImage>
+
+        <Container>
 
             <Title>Clínica Natureh</Title>
             <SubTitle>São Paulo, SP</SubTitle>
@@ -42,5 +43,6 @@ export const ClinicAdress = ({ navigation }) => {
 
             </ContainerScroll>
         </Container>
+        </>
     )
 }
