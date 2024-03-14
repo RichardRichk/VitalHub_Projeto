@@ -7,11 +7,13 @@ import { SubTitle, Title } from "../../components/Title/Style"
 import { AntDesign } from "@expo/vector-icons"
 import { ButtonSecondaryForm, ButtonSecondaryFormTitle, HR } from "./Style"
 import { useState } from "react"
+import { CameraComp } from "../../components/Camera/Camera"
 
 export const FormRequire = ({ navigation }) => {
 
-    const [userType, setuserType] = useState("Paciente");
-    const image = require("../../assets/Images/ProfilePic.png")
+    const [userType, setuserType] = useState("Doctor");
+    const image = require("../../assets/Images/ProfilePic.png");
+    const [showCamera, setShowCamera] = useState(false);
 
     return (
         <Container>
@@ -75,7 +77,7 @@ export const FormRequire = ({ navigation }) => {
 
                             <DoubleView>
 
-                                <ButtonPhoto>
+                                <ButtonPhoto onPress={() => setShowCamera(true)}>
                                     <TextButton>
                                         <AntDesign
                                             name="camera"
@@ -84,6 +86,7 @@ export const FormRequire = ({ navigation }) => {
                                     </TextButton>
                                     <TextButton>Enviar</TextButton>
                                 </ButtonPhoto>
+                                <CameraComp visible={showCamera}/>
 
                                 <ButtonSecondaryForm onPress={() => navigation.replace("Home")}>
                                     <ButtonSecondaryFormTitle>Cancelar</ButtonSecondaryFormTitle>

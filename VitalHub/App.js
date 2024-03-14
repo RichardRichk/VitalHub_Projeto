@@ -53,10 +53,11 @@ export default function App() {
       <Stack.Navigator
         screenOptions={{headerShown: false}}
       >
-        <Stack.Screen
-          name='ClinicAdress'
-          component={ClinicAdress}
-          options={{title: 'Clinic_Adress'}}
+
+<Stack.Screen
+          name='FormRequire'
+          component={FormRequire}
+          options={{title: 'Form_Require'}}
         />
 
         <Stack.Screen
@@ -107,11 +108,11 @@ export default function App() {
           options={{title: 'Home'}}
         />
 
-        <Stack.Screen
+        {/* <Stack.Screen
           name='FormRequire'
           component={FormRequire}
           options={{title: 'Form_Require'}}
-        />
+        /> */}
 
         <Stack.Screen
           name='ClinicSelect'
@@ -128,11 +129,11 @@ export default function App() {
           component={CalendarScreen}
           options={{title: 'Calendar_Screen'}}
         />
-        {/* <Stack.Screen
+        <Stack.Screen
           name='ClinicAdress'
           component={ClinicAdress}
           options={{title: 'Clinic_Adress'}}
-        /> */}
+        />
 
       </Stack.Navigator>
 

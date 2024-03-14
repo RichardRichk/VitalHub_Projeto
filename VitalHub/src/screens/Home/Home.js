@@ -27,7 +27,7 @@ const AppointmentModalData = [
 
 export const HomeFunc = ({ navigation }) => {
 
-    const [userType, setuserType] = useState("Paciente");
+    const [userType, setuserType] = useState("Doctor");
     const [statusLista, setStatusLista] = useState("pendente");
     // Satate para os modais
     const [showModalCancel, setShowModalCancel] = useState(false);
