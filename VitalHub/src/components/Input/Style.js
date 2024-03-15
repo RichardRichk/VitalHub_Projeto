@@ -51,9 +51,9 @@ export const InputLabel = styled.Text`
     margin-bottom: -5px;
     margin-top: 20px;
     color: #000000;
-    align-items: start;
+    align-items: flex-start;
     align-self: flex-start;
-    justify-content: start;
+    justify-content: flex-start;
 `
 
 export const InputDouble = styled(InputProfile)`

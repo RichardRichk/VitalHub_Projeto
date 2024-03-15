@@ -14,6 +14,7 @@ export const FormRequire = ({ navigation }) => {
     const [userType, setuserType] = useState("Doctor");
     const image = require("../../assets/Images/ProfilePic.png");
     const [showCamera, setShowCamera] = useState(false);
+    const [uriCameraCapture, setUriCameraCapture] = useState(null);
 
     return (
         <Container>
@@ -77,16 +78,26 @@ export const FormRequire = ({ navigation }) => {
 
                             <DoubleView>
 
-                                <ButtonPhoto onPress={() => setShowCamera(true)}>
+                                <ButtonPhoto onPress={() => {
+                                    setShowCamera(true);
+                                }}>
                                     <TextButton>
                                         <AntDesign
                                             name="camera"
                                             size={24}
                                         />
                                     </TextButton>
+
                                     <TextButton>Enviar</TextButton>
+
                                 </ButtonPhoto>
-                                <CameraComp visible={showCamera}/>
+                                
+                                <CameraComp 
+                                    visible={showCamera} 
+                                    setUriCameraCapture={setUriCameraCapture}
+                                    setShowCamera={setShowCamera}
+                                />
+
 
                                 <ButtonSecondaryForm onPress={() => navigation.replace("Home")}>
                                     <ButtonSecondaryFormTitle>Cancelar</ButtonSecondaryFormTitle>
