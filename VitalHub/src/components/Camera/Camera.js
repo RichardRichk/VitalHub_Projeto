@@ -74,7 +74,7 @@ export const CameraComp = ({ visible, setShowCamera, setUriCameraCapture }) => {
                         <AntDesign name="picture" size={23} color={'#fff'} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.btnCaptura} onPress={() => CapturePhoto()}>
+                    <TouchableOpacity style={styles.btnTake} onPress={() => CapturePhoto()}>
                         <FontAwesome name="camera" size={30} color={'#fff'} />
                     </TouchableOpacity>
 
@@ -98,7 +98,7 @@ export const CameraComp = ({ visible, setShowCamera, setUriCameraCapture }) => {
                             <FontAwesome name="trash" size={23} color={'#ff0000'} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.btnUpload} onPress={() => SavePhoto()}>
+                        <TouchableOpacity style={styles.btnUpload} onPress={() => {SavePhoto(); SendFormPhoto()}}>
                             <FontAwesome name="save" size={23} color={'#121212'} />
                         </TouchableOpacity>
 
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
 
         justifyContent: 'center'
     },
-    btnCaptura: {
+    btnTake: {
         margin: 20,
         padding: 20,
         borderRadius: 15,

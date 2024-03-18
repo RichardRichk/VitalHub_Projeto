@@ -19,3 +19,8 @@ export const HR = styled.View`
     border-bottom-width: 2px;
     border-radius: 50px;
 `
+
+export const ImageForm = styled.Image`
+    height: 121px;
+    width: 88.88%;
+`

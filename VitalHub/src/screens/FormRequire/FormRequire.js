@@ -70,11 +70,22 @@ export const FormRequire = ({ navigation }) => {
                         </>
                     ) : (
                         <>
-
-                            <InputLabel>Exames médicos</InputLabel>
-                            <InputFormNotEditable
-                                placeholder="               Nenhuma foto informada"
-                            />
+                                <InputLabel>Exames médicos</InputLabel>
+                            {
+                                uriCameraCapture == null ? (
+                                    <>
+                                        <InputFormNotEditable
+                                            placeholder="               Nenhuma foto informada"
+                                        />
+                                    </>
+                                ) : (
+                                    <>
+                                        <InputFormNotEditable
+                                            placeholder="               Nenhuma foto informada"
+                                        />
+                                    </>
+                                )
+                            }
 
                             <DoubleView>
 
@@ -91,9 +102,9 @@ export const FormRequire = ({ navigation }) => {
                                     <TextButton>Enviar</TextButton>
 
                                 </ButtonPhoto>
-                                
-                                <CameraComp 
-                                    visible={showCamera} 
+
+                                <CameraComp
+                                    visible={showCamera}
                                     setUriCameraCapture={setUriCameraCapture}
                                     setShowCamera={setShowCamera}
                                 />
